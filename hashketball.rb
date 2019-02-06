@@ -145,3 +145,9 @@ def team_colors(team_name)
   find_team = team_stats.find {|team| team.fetch(:team_name) == team_name}
   find_team.fetch(:colors)
 end
+
+def team_names
+  team_stats.collect do |team|
+    team[:team_name]
+  end
+end
