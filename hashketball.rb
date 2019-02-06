@@ -134,7 +134,7 @@ def shoe_size(name)
   find_shoe.fetch(:shoe)
 end
 
-def team_colors(team_name)
-  find_team = team.find {|team| team.fetch(:team_name) == team_name}
+def team_colors(team_name1)
+  find_team = team_name.find {|team| team.fetch(:team_name1) == team_name1}
   find_team.fetch(:colors)
 end
