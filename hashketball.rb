@@ -133,3 +133,10 @@ def shoe_size(name)
   find_shoe = players.find {|player| player.fetch(:player_name) == name }
   find_shoe.fetch(:shoe)
 end
+
+def team_stats
+  home_team = game_hash.values_at(:home)
+  away_team = game_hash.values_at(:away)
+  total_team_stats = home_team + away_team
+  total_team_stats
+end
