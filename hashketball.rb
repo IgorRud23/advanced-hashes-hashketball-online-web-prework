@@ -142,6 +142,6 @@ def team_stats
 end
 
 def team_colors(team_name)
-  find_team = team_name.find {|team| team.fetch(:team_name) == team_name}
+  find_team = team_stats.find {|team| team.fetch(:team_name) == team_name}
   find_team.fetch(:colors)
 end
